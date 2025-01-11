@@ -1,9 +1,11 @@
 ---
-date: '2025-01-08T23:48:03-05:00'
+date: '2025-01-10T23:48:03-05:00'
 draft: true
 title: 'Mumen Controller'
-omit_header_text: true
-featured_image: '/images/pcb_layout.webp'
+# omit_header_text: true
+featured_image: '/images/controller.webp'
+type: page
+
 ---
 
 Checking my git logs, I've worked on what would become mumen-controller for nearly 3 years at the time of writing this and have never stopped to record my progress in a useful way (though I have written about it in various private chat with friends and posted photos of build progress to a few group chats). For the beginning of this post, I'll focus on a historical recap to the best of my available records and recolection. Some details may be slightly deviated from the way things went, but it should give a useful-enough background on the project, some of the hurtles to cross, and where the current goals were generated. 
