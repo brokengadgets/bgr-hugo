@@ -1,5 +1,5 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://brokengadgets.io'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'Broken Gadgets R&D'
 theme = 'ananke'
-tableOfContetns = true
+tableOfContents = true
