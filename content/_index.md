@@ -5,6 +5,10 @@ description: "We build things, break things, \nand build things that break thing
 theme_version: '2.8.2'
 cascade:
   featured_image: '/images/pcb_layout.webp'
+  background: '/images/bg.webp'
+  body_classes: 'avenir bg-near-black near-white'
+  text_color: 'near-white'
+  post_content_classes: 'near-white h2.light-gray'
 ---
 This website serves as a living archive of projects. 
 

@@ -2,4 +2,4 @@ baseURL = 'https://brokengadgets.io'
 languageCode = 'en-us'
 title = 'Broken Gadgets R&D'
 theme = 'ananke'
-tableOfContents = true
+# tableOfContents = true
