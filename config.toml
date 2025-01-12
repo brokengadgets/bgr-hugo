@@ -29,7 +29,7 @@ priority = 0.5
 filename = "sitemap.xml"
 
 [params]
-author = ""
+author = "Ian Trentshire"
 favicon = "favicon.ico"
 site_logo = "/images/bgr.svg"
 description = "We build things, break things, and build things that break things."
@@ -40,7 +40,7 @@ background_color_class = "bg-near-black"
 featured_image_class = "cover bg-top"
 # choose a color dimming class for the page or site header from any on this page: https://tachyons.io/docs/themes/skins/, preface it with "bg-" and add the value such as "-X0" where X is in [1,9]
 cover_dimming_class = "bg-black-60"
-recent_posts_number = 6
+recent_posts_number = 2
 
 [params.ananke.social.share]
 networks = [
