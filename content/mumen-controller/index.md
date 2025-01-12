@@ -44,7 +44,7 @@ The [main branch](https://github.com/nulvox/MumenController) underwent a rocky l
    - Users have to solder themselves. Nothing I'm not used to, but not what I expect from a product at $60
  - No support for analog inputs 
    - Though it does support pretty standard analog emulation
-   - and neaT PS5 touchpad emulation!
+   - and neat PS5 touchpad emulation!
 ![Brook P5 Mini front: notice the potting compound on the small chip in the bottom left](/images/brook-front50.webp) ![Brook P5 Mini back: this footprint suggests the small chip is the MCU](/images/brook-back50.webp)
 
 In the process of making the rust firmware more efficient, I eventually uncovered a messy showstopper: the C++ firmware was running with an unavoidable race condition this whole time and rustc was having no part of it even with extensive coaxing. Specifically, the hardware atomics on the ProMicro were only half as wide as needed to write the HID Descriptor table for the Switch Pro Controllers. 😵 Time to change. 
@@ -82,3 +82,18 @@ The commercial competitor there is the Universal Fighting Board which does a lot
  - Signal rectifier diodes
  - A standard header for buttons
  - Brook touchpad emulation
+
+ #### What About Speed
+ To compete against the speed demon, it is important to perform faster than the current leader and provide a superior feature set. What does the P5Mini do?
+  - PS3/4/5 support (Xinput for PC, console auto-detection)
+  - Firmware-side SOCD cleaning (with multiple profiles to choose from at controller boot-time)
+  - USB-firmware upgrades (no disassembly)
+  - Analog-stick emulation (with a 3-second long-press to toggle)
+  - an impressive 8ms input latency
+
+Some target features might include:
+ - Wider or different console support
+ - True-analog support
+ - Less input latency? 🤷 
+ - Easier to use connections
+ - 
