@@ -93,4 +93,14 @@ Some target features might include:
  - True-analog support
  - Less input latency? 🤷 
  - Easier to use connections
- - 
+ - Some layer of flexibility missing from P5Mini
+
+While the targets here are pretty steep to still maintain low latency, I've done a bit of lean embedded development before and I think I have a few tricks up my sleeves to help eek out ahead while still having more features, but it's going to take a while to get it set up just right. 😉 
+Future updates and posts may cover topics such as:
+ - building the latency testing stack
+ - ways more speed is squeezed out of the system
+ - tactics to add features without runtime latency overhead
+ - hardware woes
+ - supporting tooling buildout
+ - design and deployment of this blog
+ - unrelated projects I undertake
