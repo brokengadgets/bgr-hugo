@@ -1,6 +1,6 @@
 title = "Broken Gadgets"
 baseURL = "https://brokengadgets.io"
-theme = ["github.com/nulvox/gohugo-theme-ananke"]
+#theme = ["github.com/nulvox/gohugo-theme-ananke"]
 resourceDir = "../resources"
 
 defaultContentLanguage = "en"
