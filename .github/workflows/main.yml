@@ -18,7 +18,10 @@ jobs:
           hugo-version: '0.119.0'
           # extended: true
       - name: Build
-        run: cd main ; hugo --minify
+        run: |
+          cd main
+          hugo mod init github.com/nulvox/gohugo-theme-ananke
+          hugo --minify
       - name: Checkout pages
         uses: actions/checkout@v4
         with:
