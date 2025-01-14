@@ -1,14 +1,14 @@
 ---
 date: '2025-01-13T20:33:38-05:00'
 draft: true
-title: 'Free Host'
+title: 'Free Hosting'
 type: page
 ---
 
 The deployment of this website went through several iterations which generally failed for being to complicated or expensive to maintain before landing on this stack explicitly to solve that problem. Since this involved stringing a number of tools together, it seemed prudent to write these efforts for others (including future me) to benefit from. This is not a perfect guide to build any website in any scenario and it doesn't aim to be; this is how this website was deployed to suit the needs of this website's maintainers. Some parts (especially those using hugo and inside the theme) ~~should~~could be done better, but these **work**. 
 
 # 🤖 Site Generator 🤖 
-Before looking at hosting, it's important to have anything to host. This was built with [Hugo](https://gohugo.io/) and, though the design started with the [Ananke theme](https://github.com/theNewDynamic/gohugo-theme-ananke), the shortcomings quickly showed and a [fork](https://github.com/nulvox/gohugo-theme-ananke) of that theme is now doing most of the lifting. This generator was selected because I'm quite fond of GoLang and was really just looking for a static site generator which wouldn't do the same terrible things to CSS inheritance that Jekyl does. ![uhhhg!](/images/shudder-nph.gif)
+Before looking at hosting, it's important to have anything to host. This was built with [Hugo](https://gohugo.io/) and, though the design started with the [Ananke theme](https://github.com/theNewDynamic/gohugo-theme-ananke), the shortcomings quickly showed and a [fork](https://github.com/nulvox/gohugo-theme-ananke) of that theme is now doing most of the lifting. This generator was selected because I'm quite fond of GoLang and was really just looking for a static site generator which wouldn't do the same terrible things to CSS inheritance that Jekyl does. ![uhhhg!](/images/neil-patrick-harris-shudder.gif)
 
 To set up your own git repo as a hugo theme, you can just add it as a submodule to your side builder repo: `git submodule add https://github.com/nulvox/gohugo-theme-ananke themes ananke` 
 
