@@ -10,6 +10,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
+          token: ${{ secrets.HUGO_PAT }}
           path: main
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
