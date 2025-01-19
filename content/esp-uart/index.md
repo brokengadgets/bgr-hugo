@@ -19,7 +19,7 @@ Before getting started, we needed to find a board support package for the ESP32 
 Upon compilation it was determined that there was no serial library to compile.\
 `import serial`\
 `ImportError: No module named serial`\
-As it turns out, it's a python module to be downloaded and I did not have pip, either.\
+As it turns out, it's a python module to be downloaded and I did not have pip, either. Open a terminal and input:\
 `sudo pacman -S python-pip`\
 then\
 `pip install pyserial`\
@@ -27,7 +27,7 @@ Come to compile again and everything checks out, going to flash it to the board 
 `Serial port /dev/ttyUSB0`\
 `File "/home/YOURUSERHERE/.local/lib/python3.10/site-packages/serial/serialposix.py", line 322, in open self.fd = os.open(self.portstr, os.O_RDWR | os.O_NOCTTY | os.O_NONBLOCK)`\
 `PermissionError: [Errno 13] Permission denied: '/dev/ttyUSB0'`\
-Permissions can be checked using:\
+Permissions can be checked in your terminal using:\
 `ls -lash /dev/tty*`\
 in this case, I needed to modify my user permissions in the group uucp to access serial devices. \
 `usermod -aG YOURUSERHERE uucp`
