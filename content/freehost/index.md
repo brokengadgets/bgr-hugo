@@ -76,7 +76,7 @@ jobs:
 # 🔑 Creds 🔑 
 This is fine and dandy, but this action won't have permissions to commit to the repo (if you set your life up right). If nobody has configured Personal Access Token (PAT) policies for your organization, you will need to load up org settings and define them first (in a way that is at least somewhat permissive to get some token to a user). Once that is up, open your user settings -> Developer Settings -> Personal Access Tokens -> Fine-grained tokens. From here, generate a new token and give it permissions to read and write the repos (you can't scope these per-repo yet 😔) and generate it. Copy the content it gives you and move on over to org settings again. In the left menu pick Secrets and Variables -> Actions. Next, add a new org secret, give it a name (in our workflow it is `HUGO_PAT`) and ensure the repos above have access to it (both will need to be public for free hosting).
 
-# 🦹‍♂️ Watch Your Machinations Unfold 🦹‍♂️
+# 🦹‍♂️ Observe Your Machinations 🦹‍♂️
 With that done, any change to the Hugo repo should redeploy the website. It's quite satisfying to see the workflows run. To stay in the free tier on all this you can't run more than: 
   - 20hrs/month GH Pipeline exec
   - 50 form submissions/month
