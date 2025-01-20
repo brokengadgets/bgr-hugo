@@ -2,6 +2,8 @@
 date: '2025-01-13T20:33:38-05:00'
 draft: false
 title: 'Free Hosting'
+omit_header_text: true
+featured_image: '/images/freehost.png'
 type: page
 ---
 
