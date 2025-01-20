@@ -40,9 +40,10 @@ PermissionError: [Errno 13] Permission denied: '/dev/ttyUSB0'
 
 
 Permissions can be checked in your terminal using:\
-{{ highlight bash "linenos=false" >}}
+{{< highlight bash "linenos=false" >}}
 ls -lash /dev/tty*
 {{< / highlight >}}
+
 in this case, I needed to modify my user permissions in the group uucp to access serial devices. \
 {{ highlight bash "linenos=false" >}}
 sudo usermod -aG YOURUSERHERE uucp
