@@ -7,7 +7,11 @@ featured_image: '/images/controller.webp'
 type: page
 
 ---
-Many projects have me finding myself in a position where I cannot find all of the information in one place to solve what should be a simple problem. I'm on Manjaro Linux trying to use the Arduino IDE to create a UART to interface with.
+Many projects have me finding myself in a position where I cannot find all of the information in one place to solve what should be a simple problem. 
+
+![esp uart pinout](/images/espuart-pinout.png)
+
+I'm on Manjaro Linux trying to use the Arduino IDE to create a usb UART interface from an esp32 devkit I have in the drawer.
 Before getting started, we needed to find a board support package for the ESP32 to shove into the Arduino IDE.
 
 1. With Arduino IDE open, press `Ctrl`+`,`
