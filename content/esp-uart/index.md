@@ -21,10 +21,10 @@ Before getting started, we needed to find a board support package for the ESP32 
 5. Select an Arduino esp32 option from the boards dropdown before compiling or flashing
 
 Upon compilation it was determined that there was no serial module available for flashig phase.\
-
-`import serial`
-`ImportError: No module named serial`
-
+{{< highlight bash "linesos=false" >}}
+import serial
+ImportError: No module named serial
+{{< / highlight >}}
 
 As it turns out, I did not have pip, either. Open a terminal and input:\
 {{< highlight bash "linesos=false" >}}
