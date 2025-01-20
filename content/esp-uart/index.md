@@ -1,8 +1,8 @@
 ---
-date: '2025-01-19T23:48:03-05:00'
+date: '2025-01-18T23:48:03-05:00'
 draft: false
 title: 'ESP UART using Arduino IDE'
-# omit_header_text: true
+omit_header_text: true
 featured_image: '/images/pinned.png'
 type: page
 
