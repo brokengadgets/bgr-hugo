@@ -45,12 +45,12 @@ ls -lash /dev/tty*
 {{< / highlight >}}
 
 in this case, I needed to modify my user permissions in the group uucp to access serial devices. \
-{{ highlight bash "linenos=false" >}}
+{{< highlight bash "linenos=false" >}}
 sudo usermod -aG YOURUSERHERE uucp
 {{< / highlight >}}
 
 To remove users from a group if you wish to do so after flashing:\
-{{ highlight bash "linenos=false" >}}
+{{< highlight bash "linenos=false" >}}
 sudo gpasswd -d YOURUSERHERE uucp
 {{< / highlight >}}
 
