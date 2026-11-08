@@ -20,14 +20,14 @@ Before getting started, we needed to find a board support package for the ESP32 
 4. Search `Esp32` and install `Arduino ESP32 Boards`
 5. Select an Arduino esp32 option from the boards dropdown before compiling or flashing
 
-Upon compilation it was determined that there was no serial module available for flashig phase.\
-{{< highlight bash "linesos=false" >}}
+Upon compilation it was determined that there was no serial module available for flashing phase.\
+{{< highlight bash "linenos=false" >}}
 import serial
 ImportError: No module named serial
 {{< / highlight >}}
 
 As it turns out, I did not have pip, either. Open a terminal and input:\
-{{< highlight bash "linesos=false" >}}
+{{< highlight bash "linenos=false" >}}
 sudo pacman -S python-pip
 pip install pyserial
 {{< / highlight >}}
@@ -46,7 +46,7 @@ ls -lash /dev/tty*
 
 in this case, I needed to modify my user permissions in the group uucp to access serial devices. \
 {{< highlight bash "linenos=false" >}}
-sudo usermod -aG YOURUSERHERE uucp
+sudo usermod -aG uucp YOURUSERHERE
 {{< / highlight >}}
 
 To remove users from a group if you wish to do so after flashing:\

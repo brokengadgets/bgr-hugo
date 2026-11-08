@@ -1,12 +1,13 @@
 # bgr-hugo
-This is the static site-building repo for brokengadgets.io
 
-# Getting started
+Hugo source repository for **[brokengadgets.io](https://brokengadgets.io)**. Pushes to `main` automatically build and publish the static site to [`brokengadgets/brokengadgets.github.io`](https://github.com/brokengadgets/brokengadgets.github.io) via GitHub Actions.
+
+## Local Development
+
+```bash
+git clone --recurse-submodules git@github.com:brokengadgets/bgr-hugo.git
+cd bgr-hugo
+hugo server -D
 ```
-# pacman -S hugo
-$ git clone git@github.com:brokengadgets/bgr-hugo.git
-$ cd bgr-hugo
-$ git submodule update --init --recursive
-$ hugo server
-```
-navigate to http://127.0.0.1:1313 to see the site
+
+Then open `http://127.0.0.1:1313` in your browser.
