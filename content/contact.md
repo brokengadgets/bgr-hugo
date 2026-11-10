@@ -8,6 +8,6 @@ menu: main
 
 ---
 
-Send us an email with the form below if you think Broken Gadgets can help you
+Send us an email with the form below if you think Broken Gadgets can help you.
 
 {{< form-contact action="https://formspree.io/f/xzzzyyvq"  >}}

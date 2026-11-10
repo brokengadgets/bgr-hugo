@@ -11,27 +11,27 @@ Many projects have me finding myself in a position where I cannot find all of th
 
 ![esp uart pinout](/images/espuart-pinout.png)
 
-I'm on Manjaro Linux trying to use the Arduino IDE to create a usb UART interface from an esp32 devkit I have in the drawer.
+I'm on Manjaro Linux trying to use the Arduino IDE to create a USB UART interface from an ESP32 devkit I have in the drawer.
 Before getting started, we needed to find a board support package for the ESP32 to shove into the Arduino IDE.
 
 1. With Arduino IDE open, press `Ctrl`+`,`
-2. Under `Additional Board Manager URLs` add `https://espressif.github.io/arduino-esp32/package_esp32_dev_index.json`
-3. Open Tools > Board > Board manager
-4. Search `Esp32` and install `Arduino ESP32 Boards`
-5. Select an Arduino esp32 option from the boards dropdown before compiling or flashing
+2. Under `Additional Board Manager URLs`, add `https://espressif.github.io/arduino-esp32/package_esp32_dev_index.json`
+3. Open Tools > Board > Board Manager
+4. Search `ESP32` and install `Arduino ESP32 Boards`
+5. Select an Arduino ESP32 option from the boards dropdown before compiling or flashing
 
-Upon compilation it was determined that there was no serial module available for flashing phase.\
+Upon compilation, it was determined that there was no serial module available for the flashing phase:\
 {{< highlight bash "linenos=false" >}}
 import serial
 ImportError: No module named serial
 {{< / highlight >}}
 
-As it turns out, I did not have pip, either. Open a terminal and input:\
+As it turns out, I did not have pip either. Open a terminal and input:\
 {{< highlight bash "linenos=false" >}}
 sudo pacman -S python-pip
 pip install pyserial
 {{< / highlight >}}
-Come to compile again and everything checks out, going to flash it to the board now to find another error:\
+Come to compile again and everything checks out; going to flash it to the board now reveals another error:\
 {{< highlight bash "linenos=false" >}}
 Serial port /dev/ttyUSB0
 File "/home/YOURUSERHERE/.local/lib/python3.10/site-packages/serial/serialposix.py", line 322, in open self.fd = os.open(self.portstr, os.O_RDWR | os.O_NOCTTY | os.O_NONBLOCK)
@@ -44,7 +44,7 @@ Permissions can be checked in your terminal using:\
 ls -lash /dev/tty*
 {{< / highlight >}}
 
-in this case, I needed to modify my user permissions in the group uucp to access serial devices. \
+In this case, I needed to modify my user permissions in the `uucp` group to access serial devices:\
 {{< highlight bash "linenos=false" >}}
 sudo usermod -aG uucp YOURUSERHERE
 {{< / highlight >}}
@@ -54,8 +54,8 @@ To remove users from a group if you wish to do so after flashing:\
 sudo gpasswd -d YOURUSERHERE uucp
 {{< / highlight >}}
 
-Below pins 2 and 4 are being used. Pin 2 for receive and pin 4 for transmit.\
-A substantial amount of help came from [this source](https://techoverflow.net/2021/11/19/how-to-use-esp32-as-usb-to-uart-converter-in-platformio/) 
+Below, pins 2 and 4 are being used: pin 2 for receive and pin 4 for transmit.\
+A substantial amount of help came from [this source](https://techoverflow.net/2021/11/19/how-to-use-esp32-as-usb-to-uart-converter-in-platformio/).
 
 Using any GPIO pins as Rx / Tx:
 
@@ -66,7 +66,7 @@ void setup() {
 //Serial connects to the computer
     Serial.begin(115200);
 //Serial2 is the hardware UART port that connects to the external circuit.
-//115200 is the baudrate expected for UART.
+//115200 is the baud rate expected for UART.
     Serial2.begin(115200, SERIAL_8N1,
     UART_RX_PIN,
     UART_TX_PIN);
@@ -85,7 +85,7 @@ void setup() {
 
 {{< / highlight >}}
 
-Screen command for setting baudrate on your TTY port:\
+Screen command for setting the baud rate on your TTY port:\
 {{< highlight bash "linenos=false" >}}
 screen /dev/ttyUSB0 115200
 {{< / highlight >}}
