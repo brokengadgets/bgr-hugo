@@ -19,30 +19,30 @@ concurrency:
 jobs:
   zizmor:
     name: Audit GitHub Actions workflows
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     permissions:
       contents: read
       actions: read
     steps:
       - name: Check out source
-        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
 
       - name: Run zizmor
-        uses: zizmorcore/zizmor-action@cc914d7f3750a2d13d75c7f184a1060aa0e9d482 # v0.6.4
+        uses: zizmorcore/zizmor-action@45d7276c9ca790aabd705e31ca99c6185c3e76dd # v0.8.1
         with:
           advanced-security: false
 
   build:
     name: Build Hugo site and publish to Pages repo
     needs: zizmor
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     permissions:
       contents: read
     steps:
       - name: Checkout source and theme submodule
-        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           path: main
           submodules: true
@@ -50,7 +50,7 @@ jobs:
           persist-credentials: false
 
       - name: Setup Hugo
-        uses: peaceiris/actions-hugo@2752ce1d29631191ea3f27c23495fa06139a5b78 # v3
+        uses: peaceiris/actions-hugo@2752ce1d29631191ea3f27c23495fa06139a5b78 # v3.2.1
         with:
           hugo-version: '0.140.2'
           extended: true
@@ -58,11 +58,10 @@ jobs:
       - name: Build site
         run: |
           cd main
-          hugo mod init github.com/nulvox/gohugo-theme-ananke
           hugo --minify
 
       - name: Checkout pages repository
-        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           repository: brokengadgets/brokengadgets.github.io
           path: pages
