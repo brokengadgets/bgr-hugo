@@ -1,5 +1,35 @@
-baseURL = 'https://brokengadgets.io'
-languageCode = 'en-us'
-title = 'Broken Gadgets R&D'
-theme = 'ananke'
-# tableOfContents = true
+baseURL = "https://brokengadgets.io"
+languageCode = "en-US"
+title = "Broken Gadgets R&D"
+theme = "ananke"
+resourceDir = "../resources"
+
+defaultContentLanguage = "en"
+sectionPagesMenu = "main"
+enableRobotsTXT = true
+
+[pagination]
+pagerSize = 6
+
+[sitemap]
+changefreq = "monthly"
+priority = 0.5
+filename = "sitemap.xml"
+
+[params]
+author = "Ian Trentshire"
+favicon = "favicon.ico"
+site_logo = "/images/bgr.svg"
+description = "We build things, break things, and build things that break things."
+background_color_class = "bg-near-black"
+featured_image_class = "cover bg-top"
+cover_dimming_class = "bg-black-60"
+recent_posts_number = 3
+
+[params.ananke.social.share]
+networks = [
+  "email",
+  "facebook",
+  "bluesky",
+  "linkedin"
+]
